@@ -26,6 +26,8 @@ body {
     height: 80px; 
     background-image: url('Mr._krabs.svg.png');
     background-image: url('Plankton_stock_art.webp'); 
+    background-image: url('Patrick_Star.svg.png'); 
+    background-image: url('Sandy_in_bikini.webp');
     background-size: cover;
     cursor: pointer;
 }

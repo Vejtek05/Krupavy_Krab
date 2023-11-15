@@ -1,6 +1,15 @@
+const MINIMUM = 75;
+const MAXIMUM = 100;
+const jmenoUzivatele = window.prompt('Jak ti mám říkat?', );
+window.alert(`Ahoj, ${jmenoUzivatele}!`);
+const jeZena = window.confirm('Jsi hráč?');
+
+if (jeZena) {
+  const rokNarozeni = window.confirm('Tak vítej ve hře');
+}
 const target = document.getElementById("target");
 const squareSize = 500; 
-const imagePaths = ['Mr._Krabs.svg.png', 'Plankton_stock_art.webp']; 
+const imagePaths = ['Mr._Krabs.svg.png', 'Plankton_stock_art.webp', 'Patrick_Star.svg.png' ,'Sandy_in_bikini.webp' ]; 
 let currentImageIndex = 0; 
 function getRandomPosition() {
     const maxX = squareSize - target.offsetWidth;

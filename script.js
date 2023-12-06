@@ -46,11 +46,11 @@ document.addEventListener("click", (event) => {
         // Kliknutí bylo uvnitř postavy
         moveTarget();
         clickCount++;
-        clickCountDisplay.textContent = `Počet kliknutí: ${clickCount}`;
+        clickCountDisplay.textContent = `Hit: ${clickCount}`;
     } else {
         // Kliknutí bylo mimo postavu
         missedCount++;
-        missedCountDisplay.textContent = `Počet chyb: ${missedCount}`;
+        missedCountDisplay.textContent = `Miss: ${missedCount}`;
     }
 });
 

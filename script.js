@@ -43,15 +43,40 @@ document.addEventListener("click", (event) => {
     const clickY = event.clientY - rect.top;
 
     if (clickX >= 0 && clickY >= 0 && clickX <= target.offsetWidth && clickY <= target.offsetHeight) {
-        // Kliknutí bylo uvnitř postavy
         moveTarget();
         clickCount++;
         clickCountDisplay.textContent = `Hit: ${clickCount}`;
     } else {
-        // Kliknutí bylo mimo postavu
         missedCount++;
         missedCountDisplay.textContent = `Miss: ${missedCount}`;
     }
 });
 
 moveTarget();
+
+const JMENO = '----';
+const HESLO = '----';
+let prihlaseny = false;
+let jeRobot = false;
+let pocetPokusu = 0;
+
+do {
+  if (pocetPokusu >= 3) {
+    jeRobot = window.confirm('Jsi trouba?');
+  }
+  const uzivatelskeHeslo = window.prompt(`Chceš vážně hrát? Odpověz ano/ne`);
+  if (uzivatelskeHeslo === HESLO && !jeRobot) {
+    prihlaseny = true;
+  }
+  else {
+    pocetPokusu ++;
+  }
+} while (!prihlaseny && !jeRobot && pocetPokusu < 6);
+
+if (prihlaseny) {
+  window.alert('Jsi si jistý?');
+}
+
+else {
+  window.alert('Tak si to užij!');
+}

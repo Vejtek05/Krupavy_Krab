@@ -55,7 +55,7 @@ document.addEventListener("click", (event) => {
 moveTarget();
 
 const JMENO = '----';
-const HESLO = '----';
+const HESLO = 'ano';
 let prihlaseny = false;
 let jeRobot = false;
 let pocetPokusu = 0;
